@@ -15,10 +15,10 @@ You can test things locally using a `payload.json` file:
 
 ``` bash
 curl -X POST \
-      -H 'content-type: application/json' \
-      -H 'X-GitHub-Event: issues' \
-      -d @payload.json
-      http://localhost:5000/turkeysandwiches
+     -H 'content-type: application/json' \
+     -H 'X-GitHub-Event: issues' \
+     -d @payload.json
+     http://localhost:5000/turkeysandwiches
 ```
 
 This Source Code Form is subject to the terms of the Mozilla Public
