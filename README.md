@@ -2,7 +2,7 @@
 
 A tiny app to listen for GitHub webhook Issues events (ignoring when issues are closed) and add labels.
 
-When an issue is created in the [web-bugs](https://github.com/webcompat/web-bugs), usually via [webcompat.com](http://webcompat.com), the app looks for label metadata in the form of a special HTML comment: `<!-- @browser: firefox -->`, for example. If found, our friend @Neptr will add the label and a comment.
+When an issue is created in the [web-bugs](https://github.com/webcompat/web-bugs), usually via [webcompat.com](http://webcompat.com), the app looks for label metadata in the form of a special HTML comment: `<!-- @browser: firefox -->`, for example. If found, our friend [Neptr](https://github.com/Neptr) will add the label and a comment.
 
 This repo assumes the following environment variables are set:
 
