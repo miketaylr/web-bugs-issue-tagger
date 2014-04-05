@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 
 def api_post(endpoint, payload, issue):
-    '''Helper method to posts junk to GitHub. Assumes a USER_REPO and
+    '''Helper method to post junk to GitHub. Assumes a USER_REPO and
     OAUTH_TOKEN environment variable exist.'''
     repo = os.environ['USER_REPO']
     headers = {'Authorization': 'token {0}'.format(os.environ['OAUTH_TOKEN'])}
@@ -69,7 +69,7 @@ def index():
 @app.route('/turkeysandwiches', methods=['GET', 'POST'])
 def hooklistener():
     '''Listen for the "issues" webhook event, parse the body,
-       post back labels'''
+       post back labels. But only do that for the 'opened' action.'''
     if request.method == 'GET':
         return abort(403)
     elif (request.method == 'POST' and
