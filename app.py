@@ -82,6 +82,9 @@ def hooklistener():
             return 'gracias, amigo.'
         else:
             return 'cool story, bro.'
+    elif (request.method == 'POST' and
+            request.headers.get('X-GitHub-Event') == 'ping'):
+        return 'pong'
 
 if __name__ == "__main__":
     app.run(debug=True)
