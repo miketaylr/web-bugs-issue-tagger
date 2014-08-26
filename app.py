@@ -41,7 +41,7 @@ def parse_label(body, issue_number):
 
 def set_label(label, issue_number):
     '''Do a GitHub POST request using one of our bots, which has push access
-    and set a label for the issue. Then leave a comment.'''
+    and set a label for the issue. Unrecognized labels will be ignored.'''
     # POST /repos/:owner/:repo/issues/:number/labels
     # ['Label1', 'Label2']
     payload = [label]
