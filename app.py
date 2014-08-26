@@ -46,17 +46,6 @@ def set_label(label, issue_number):
     # ['Label1', 'Label2']
     payload = [label]
     api_post('labels', payload, issue_number)
-    comment_on_issue(label, issue_number)
-
-
-def comment_on_issue(label, issue_number):
-    '''Comment that a label was added. This will get annoying undoubtedly.'''
-    # POST /repos/:owner/:repo/issues/:number/comments
-    # {"body": "a new comment"}
-    payload = {"body":
-               "Greetings, creator! I added a {0} label for you.".format(
-                   label)}
-    api_post('comments', payload, issue_number)
 
 
 @app.route('/')
