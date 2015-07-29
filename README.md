@@ -22,8 +22,8 @@ You can test things locally using a `payload.json` file:
 curl -X POST \
      -H 'content-type: application/json' \
      -H 'X-GitHub-Event: issues' \
-     -d @payload.json
-     http://localhost:5000/turkeysandwiches
+     -d @payload.json \
+     http://127.0.0.1:5000/turkeysandwiches
 ```
 
 ### License
