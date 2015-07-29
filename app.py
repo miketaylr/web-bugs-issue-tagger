@@ -36,7 +36,9 @@ def parse_label(body, issue_number):
         # what groups(n)[0] is in the future.
         # right now, match_list.groups(0) should look like:
         # ('browser', 'firefox')
-        set_label(match_list.groups(0)[1].lower(), issue_number)
+        browser = match_list.groups(0)[1].lower()
+        dash_browser = '-'.join(browser.split())
+        set_label('browser-' + dash_browser, issue_number)
 
 
 def set_label(label, issue_number):
