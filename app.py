@@ -30,7 +30,7 @@ def parse_label(body, issue_number):
     becuase that's all that we set in webcompat.com.
 
     So, CAVEAT EMPTOR, or whatever.'''
-    match_list = re.search(r'<!--\s@(\w+):\s(.+?)\s-->', body)
+    match_list = re.search(r'<!--\s@(\w+):\s([^\d]+?)\s[\d\.]+\s-->', body)
     if match_list:
         # perhaps we do something more interesting depending on
         # what groups(n)[0] is in the future.
